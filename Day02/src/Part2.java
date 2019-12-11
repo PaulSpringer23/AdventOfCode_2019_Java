@@ -18,60 +18,30 @@ public class Part2 {
 
         List<Integer> backupProgram = new ArrayList<>(program);
 
-        int noun = 0;
+        String target = "19690720";
+        int noun;
         int verb = 0;
 
-        boolean error = false;
-
-        while (true)
-        {
-            program.set(1, noun);
-            program.set(2, verb);
-            int pointer = 0;
-            int opCode;
-
-            while (true) {
-                opCode = program.get(pointer);
-                if (opCode != 1 && opCode != 2) {
+        for (noun = 0; noun < 99; noun ++) {
+            String result = "";
+            for (verb = 0; verb < 99; verb++) {
+                program = new ArrayList<>(backupProgram);
+                program.set(1, noun);
+                program.set(2, verb);
+                Computer computer = new Computer(program);
+                result = computer.run();
+                if (result.equals(target)) {
                     break;
                 }
-
-                int firstValue = program.get(program.get(pointer + 1));
-                int secondValue = program.get(program.get(pointer + 2));
-                int destination = program.get(pointer + 3);
-
-                if (opCode == 1) {
-                    program.set(destination, firstValue + secondValue);
-                } else {
-                    program.set(destination, firstValue * secondValue);
-                }
-
-                pointer += 4;
             }
-
-            if (program.get(0) == 19690720) {
+            if (result.equals(target)) {
                 break;
-            } else {
-                if (noun == 99) {
-                    if (verb == 99) {
-                        error = true;
-                        break;
-                    }
-                    noun = 0;
-                    verb++;
-                } else {
-                    noun++;
-                }
-                program = new ArrayList<>(backupProgram);
             }
         }
 
-
-        if (error) {
-            System.out.println("Error!");
-        } else {
-            System.out.println("Answer: " + ((100 * noun) + verb));
-        }
+        System.out.println("Noun: " + noun);
+        System.out.println("Verb: " + verb);
+        System.out.println("Answer: " + (100 * noun + verb));
 
         System.out.println("Done!");
     }
