@@ -11,7 +11,7 @@ import java.util.Set;
 public class Part1 {
 
     public static void main(String[] args) throws IOException {
-        String inputLine = Files.readAllLines(Paths.get(new File("").getAbsolutePath() + File.separator + "src" + File.separator + "input.txt")).get(0);
+        String inputLine = Files.readAllLines(Paths.get(new File("Day07").getAbsolutePath() + File.separator + "src" + File.separator + "input.txt")).get(0);
 
         List<Integer> program = new ArrayList<>();
 

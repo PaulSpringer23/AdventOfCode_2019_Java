@@ -11,7 +11,7 @@ import java.util.Queue;
 public class Part2 {
 
     public static void main (String[] args) throws IOException {
-        List<String> input = Files.readAllLines(Paths.get(new File("").getAbsolutePath() + File.separator + "src" + File.separator + "input.txt"));
+        List<String> input = Files.readAllLines(Paths.get(new File("Day06").getAbsolutePath() + File.separator + "src" + File.separator + "input.txt"));
         HashMap<String, Planet> planets = new HashMap<>();
 
         for (String line : input) {

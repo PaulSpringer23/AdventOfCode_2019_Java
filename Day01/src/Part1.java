@@ -8,7 +8,7 @@ public class Part1 {
 
     public static void main(String[] args) throws IOException {
         int runningTotal = 0;
-        List<String> lines = Files.readAllLines(Paths.get(new File("").getAbsolutePath() + "\\src\\input.txt"));
+        List<String> lines = Files.readAllLines(Paths.get(new File("Day01").getAbsolutePath() + File.separator + "src" + File.separator + "input.txt"));
         for (String line : lines) {
             int value = Integer.parseInt(line);
             runningTotal += (value / 3) - 2;

@@ -11,7 +11,7 @@ public class Part2 {
     static int score = 0;
 
     public static void main(String[] args) throws IOException {
-        String inputLine = Files.readAllLines(Paths.get(new File("").getAbsolutePath() + File.separator + "src" + File.separator + "input.txt")).get(0);
+        String inputLine = Files.readAllLines(Paths.get(new File("Day13").getAbsolutePath() + File.separator + "src" + File.separator + "input.txt")).get(0);
 
         List<Long> program = new ArrayList<>();
 

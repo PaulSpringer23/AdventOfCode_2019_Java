@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class Part2 {
 
     public static void main(String[] args) throws IOException {
-        String input = Files.readAllLines(Paths.get(new File("").getAbsolutePath() + File.separator + "src" + File.separator + "input.txt")).get(0);
+        String input = Files.readAllLines(Paths.get(new File("Day08").getAbsolutePath() + File.separator + "src" + File.separator + "input.txt")).get(0);
         int width = 25;
         int height = 6;
         int numberOfLayers = input.length() / (width * height);

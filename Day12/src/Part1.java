@@ -8,7 +8,7 @@ import java.util.List;
 public class Part1 {
 
     public static void main(String[] args) throws IOException {
-        List<String> input = Files.readAllLines(Paths.get(new File("").getAbsolutePath() + File.separator + "src" + File.separator + "input.txt"));
+        List<String> input = Files.readAllLines(Paths.get(new File("Day12").getAbsolutePath() + File.separator + "src" + File.separator + "input.txt"));
 
         ArrayList<Moon> moons = new ArrayList<>();
 
